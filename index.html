@@ -17,13 +17,32 @@
 	<link rel="shortcut icon" href=".\favicon.ico">
 	</head>
 	
-<body id="top" class="scrollspy">
+<body id="top" class="scrollspy" >
 <!-- Pre Loader -->
 <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
 </div>
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  <h2>Tada!</h2>
+  <p>Some text in my newly loaded page..</p>
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
 <!--Navigation-->
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
  <div class="navbar-fixed">
@@ -36,7 +55,6 @@
                     <li><a href="#work">Work</a></li>
                     <li><a href="#team">Skillset</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="#intro">About</a></li>
@@ -108,14 +126,12 @@
         </div>
     </div>
 </div>
-
 <div class="parallax-container" >
     <div class="parallax"><img src="img/work.jpg"></div>
 	 <div class="w3-display-middle">
     <span class="w3-xxxlarge w3-text-white w3-wide"><strong>Work</span>
   </div>
 </div>
-
 <!--Work-->
 <div class="section scrollspy" id="work">
     <div class="container">
